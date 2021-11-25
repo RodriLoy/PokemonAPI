@@ -1,0 +1,63 @@
+@font-face {font-family: "Flexo-Medium"; src: url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.eot"); src: url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.woff") format("woff"), url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d2d21cf0ee4c1d969d8a4dccc587ab26.svg#Flexo Medium") format("svg"); }
+@font-face {font-family: "Flexo-Regular"; src: url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.eot"); src: url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.woff") format("woff"), url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.svg#Flexo") format("svg"); }
+
+$fontFamily: "Flexo-Regular",arial,sans-serif;
+$maincolor: #FFFFFF;
+$mainLetterColor: #212121;
+$colorID: #919191;
+$gray: #A4A4A4;
+
+/* COLOR TYPES POKEMONS */
+$grass: linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+$poison: linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+$water: linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+$fire: linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+$fliying: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+$bug: linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+$normal: linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+$electric:linear-gradient(180deg, #eed535 50%, #eed535 50%);
+$ground: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+$fairy: linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+$fighting: linear-gradient(180deg, #d56723 50%, #d56723 50%);
+$psychic: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+$rock: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+$ice: linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+$ghost: linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+
+/* MAP TYPES */
+$types: ("grass":linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%),
+"poison":linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%,),
+"water":linear-gradient(180deg, #4592c4 50%, #4592c4 50%),
+"fire": linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%),
+"flying": linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%),
+"bug":linear-gradient(180deg, #729f3f 50%, #729f3f 50%),
+"normal":linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%),
+"electric":linear-gradient(180deg, #eed535 50%, #eed535 50%),
+"ground":linear-gradient(180deg, #f7de3f 50%, #ab9842 50%),
+"fairy":linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%),
+"fighting":linear-gradient(180deg, #d56723 50%, #d56723 50%),
+"psychic": linear-gradient(180deg, #f366b9 50%, #f366b9 50%),
+"rock":linear-gradient(180deg, #a38c21 50%, #a38c21 50%),
+"ice":linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%),
+"ghost":linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%),
+"dragon":linear-gradient(180deg, #53a4cf 50%, #f16e57 50%),
+"dark":linear-gradient(180deg, #707070 50%, #707070 50%),
+"steel":linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%));
+
+// MIXIN
+@mixin pokemonType ($nametype,$line-height:18px,$font-size:11px) {
+    font-family: $fontFamily;
+    border-radius: 3px;
+    line-height: $line-height;
+    max-width: 110px;
+    margin: 0 1.5625% 0 0;
+    width: 38.4375%;
+    float: left;
+    text-transform: none;
+    font-size: $font-size;
+    text-align: center;
+    @if $nametype == "water" or  $nametype =="poison" or $nametype =="fire" or $nametype =="bug" or $nametype =="fighting" {
+        color: $maincolor;
+      }
+  
+  }

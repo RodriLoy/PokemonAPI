@@ -1,0 +1,42 @@
+@import "../Vars.scss";
+.pokemonEvolution {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: url('../../static/body_gray_bg.png');
+}
+.pokemonEvolutionCard{
+    &__photo {
+        
+    }
+    &__img {
+        -webkit-box-shadow: 0 4px 4px 0px #212121;
+        -ms-box-shadow: 0 4px 4px 0px #212121;
+        -moz-box-shadow: 0 4px 4px 0px #212121;
+        -o-box-shadow: 0 4px 4px 0px #212121;
+        box-shadow: 0 4px 4px 0px #212121;
+        background-color: #616161;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        display: block;
+        max-width: 150px;
+        width: 100%;
+    }
+    &__details {
+        text-align: center;
+    }
+    &__name {
+        color:$maincolor;
+        font-size: 1.5em;
+        padding-right: 10px;
+    }
+    &__id {
+        color: #a4acaf;
+        font-size: 1.5em;
+    }
+}

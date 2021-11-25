@@ -1,0 +1,13 @@
+@import "./Vars.scss";
+
+* {
+    box-sizing: border-box;
+    
+}
+body {
+    background: transparent url(../static/container_bg.png);
+    font-family: $fontFamily;
+    font-size: 16px;
+    color: $mainLetterColor;
+    height: 100%;
+}

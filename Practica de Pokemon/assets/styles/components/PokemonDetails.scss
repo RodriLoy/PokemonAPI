@@ -1,0 +1,82 @@
+@import "../Vars.scss";
+
+.pokemonDetails {
+    background-color: $maincolor;
+    height: 100%;
+    width: 60vw;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+    &__id {
+        color: #616161;
+       margin-left: 0.125em;
+       margin-top: 0.5em;
+       font-size: 3em;
+    }
+    &__details {
+        display: flex;
+        justify-content: space-evenly;;
+    }
+    &__name {
+        font-family: "Flexo-Medium",arial,sans-serif;
+        color: #212121;
+        float: left;
+        font-size: 3em;
+        margin-top: 0.5em;
+        text-align: center;
+        word-break: break-word;   
+    }
+    &__photo {
+        width: 200px;
+        height: 200px;
+    }
+    &__info {
+        background-color: #30a7d7;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 15px;
+        
+       
+    }
+    &__info-group {
+        display: flex;
+        flex-direction: column;
+    }
+    &__info-title {
+        font-family: "Flexo-Medium",arial,sans-serif;  
+    }
+    &__info-text {
+        margin-top: 7px;
+        color:$mainLetterColor;
+        font-size:1.4em;
+        font-size:bold;
+    }
+    &__right {
+        width: 40%;
+    }
+    &__description {
+        text-align: justify;
+        padding: 20px;
+        font-size: 1.0em;
+    }
+    &__titleType {
+        display:block;
+        padding-bottom: 10px;
+    }
+    @each $name, $type in $types {
+        &__type--#{$name} {
+          background: $type;
+          @include pokemonType($name,30px,16px);
+          color:$maincolor;
+          border-radius: 5px;
+        }
+
+      }
+}

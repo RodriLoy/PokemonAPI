@@ -1,0 +1,33 @@
+@import "../Vars.scss";
+
+.PokemonDetailHeader {
+    background: #fff;
+    padding: 0;
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    width: 60vw;
+  
+    
+    &__pagination {
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    &__wrapper {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        background-color: $gray;
+        height: 5vh;
+        align-items: center;
+        text-decoration: none;
+        color:#616161;
+    }
+    &__number {
+        color:$maincolor;
+    }
+}
